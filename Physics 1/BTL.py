@@ -48,6 +48,12 @@ E_mag_nozero = np.where(E_mag == 0, 1, E_mag)
 Ex_unit = Ex_grid / E_mag_nozero
 Ey_unit = Ey_grid / E_mag_nozero
 
+# Loại bỏ vùng không xác định của điện thế
+mask = np.isnan(V_grid)
+Ex_unit[mask] = np.nan
+Ey_unit[mask] = np.nan
+E_mag[mask] = np.nan
+
 step = 2   # giảm một nửa số mũi tên
 X2 = X[::step, ::step]
 Y2 = Y[::step, ::step]
