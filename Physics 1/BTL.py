@@ -84,7 +84,7 @@ cbar1.set_label("Giá trị V")
 #  Biểu diễn vector cường độ điện trường E
 ax2 = fig.add_subplot(1, 2, 2)
 q = ax2.quiver(X2, Y2, Ex_unit2, Ey_unit2, E_mag2, cmap='jet',
-               scale=30, width=0.003)
+               scale=20, width=0.003)
 
 ax2.set_title("Vector Cường độ Điện trường E", fontsize=12)
 ax2.set_xlabel("x")
